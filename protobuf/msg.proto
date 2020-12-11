@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package protobuf;
+
+message SocketMessage {
+  string type = 1;
+  string message = 2;
+  string from = 3;
+}

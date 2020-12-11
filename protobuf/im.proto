@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package protobuf;
+
+// 群发
+message SendMsgAllReq {
+  string appId = 1; // 序列号
+  string uid = 2;
+  repeated string targetIds = 3;
+  string seq = 4;
+  string message = 6; // msg
+}
+
+message SendMsgAllRsp {
+  repeated string pushIds = 1;
+}
+
+service IMServer {
+  rpc SendMsgAll(SendMsgAllReq) returns (SendMsgAllRsp) {};
+}

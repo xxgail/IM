@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package protobuf;
+
+message SocketRequest {
+  string seq = 1;
+  string cmd = 2;
+  string data = 3;
+}
+
+message SocketLogin {
+  string serviceToken = 1;
+  string appId = 2;
+  string uid = 3;
+}
+
+message SocketHeartBeat {
+  string uid = 1;
+}

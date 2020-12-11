@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package protobuf;
+
+message SocketResponseHead {
+  string seq = 1;
+  string cmd = 2;
+  SocketResponse response = 3;
+}
+
+message SocketResponse {
+  uint32 code = 1;
+  string msg = 2;
+  bytes result = 3;
+}
